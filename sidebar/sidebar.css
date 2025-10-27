@@ -1,0 +1,56 @@
+#extension-sidebar {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 400px;
+  height: 100vh;
+  background: #1e2430;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  transition: right 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+#extension-sidebar.sidebar-open {
+  right: 0;
+}
+
+.sidebar-header {
+  padding: 16px;
+  background: #252d3b;
+  border-bottom: 1px solid #2f3847;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar-header h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.sidebar-content {
+  padding: 16px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  #extension-sidebar {
+    width: 100%;
+    right: -100%;
+  }
+}
